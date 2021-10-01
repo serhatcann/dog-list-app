@@ -1,4 +1,6 @@
 import Dog from './Dog/Dog';
+import styled from 'styled-components';
+
 const DUMMY_DOGS = [
 	{
 		breeds: [
@@ -78,15 +80,24 @@ const DUMMY_DOGS = [
 		height: 1162,
 	},
 ];
+
+const DogListWrapper = styled.div`
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 20px;
+	justify-content: center;
+`;
+
 const DogList = () => {
 	return (
-		<>
+		<DogListWrapper>
 			{DUMMY_DOGS &&
 				DUMMY_DOGS.map((dog) => {
-					return <Dog key={dog.id} img={dog.url} breeds={dog.breeds}></Dog>;
+					return <Dog key={dog.id} img={dog.url} id={dog.id} breeds={dog.breeds}></Dog>;
 				})}
-			;{!DUMMY_DOGS && <p>No data!</p>}
-		</>
+			{!DUMMY_DOGS && <p>No data!</p>}
+		</DogListWrapper>
 	);
 };
 
