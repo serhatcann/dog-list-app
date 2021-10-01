@@ -6,7 +6,7 @@ const Dog = ({ breeds, img }) => {
 			<img src={img} alt='' />
 			{breeds &&
 				breeds.map((breed) => {
-					return <div>{breed.name}</div>;
+					return <div key={breed.name + breed.id}>{breed.name}</div>;
 				})}
 			<DogInfo></DogInfo>
 		</div>

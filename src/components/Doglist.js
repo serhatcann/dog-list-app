@@ -78,7 +78,7 @@ const DUMMY_DOGS = [
 		height: 1162,
 	},
 ];
-const Doglist = () => {
+const DogList = () => {
 	return (
 		<>
 			{DUMMY_DOGS &&
@@ -90,4 +90,4 @@ const Doglist = () => {
 	);
 };
 
-export default Doglist;
+export default DogList;
