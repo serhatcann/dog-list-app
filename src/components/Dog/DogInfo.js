@@ -2,8 +2,13 @@ import styled from 'styled-components';
 
 const DogInfoTitle = styled.div`
 	font-weight: bold;
-	margin-right: 15px;
 	white-space: nowrap;
+	text-align: left;
+	width: 50%;
+`;
+const DogInfoValue = styled.div`
+	text-align: left;
+	width: 50%;
 `;
 
 const DogInfoLine = styled.div`
@@ -20,27 +25,31 @@ const DogInfo = ({ breeds: breed }) => {
 		<>
 			<DogInfoLine>
 				<DogInfoTitle>Name:</DogInfoTitle>
-				{breed[0].name}
+				<DogInfoValue>{breed[0].name}</DogInfoValue>
 			</DogInfoLine>
 			<DogInfoLine>
 				<DogInfoTitle>Breed:</DogInfoTitle>
-				{breed[0].breed_group}
+				<DogInfoValue>{breed[0].breed_group}</DogInfoValue>
 			</DogInfoLine>
 			<DogInfoLine>
 				<DogInfoTitle>Breed Details:</DogInfoTitle>
-				{breed[0].bred_for}
+				<DogInfoValue>{breed[0].bred_for}</DogInfoValue>
 			</DogInfoLine>
 			<DogInfoLine>
 				<DogInfoTitle>Temperament:</DogInfoTitle>
-				{breed[0].temperament}
+				<DogInfoValue>{breed[0].temperament}</DogInfoValue>
 			</DogInfoLine>
 			<DogInfoLine>
 				<DogInfoTitle>Height(Imperical/Metric):</DogInfoTitle>
-				{breed[0].height.imperial}/{breed[0].height.metric}
+				<DogInfoValue>
+					{breed[0].height.imperial}/{breed[0].height.metric}
+				</DogInfoValue>
 			</DogInfoLine>
 			<DogInfoLine>
 				<DogInfoTitle>Weight(Imperical/Metric):</DogInfoTitle>
-				{breed[0].weight.imperial}/{breed[0].weight.metric}
+				<DogInfoValue>
+					{breed[0].weight.imperial}/{breed[0].weight.metric}
+				</DogInfoValue>
 			</DogInfoLine>
 		</>
 	);

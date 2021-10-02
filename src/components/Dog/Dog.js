@@ -9,12 +9,11 @@ const Wrapper = styled.div`
 	padding: 10px;
 	border: solid 1px rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
-	width: 400px;
+	width: 500px;
 `;
 
 const Img = styled.img`
 	height: 300px;
-	justify-content: center;
 	max-width: 100%;
 `;
 
