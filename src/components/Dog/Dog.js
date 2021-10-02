@@ -40,13 +40,17 @@ const VoteButton = styled(Button)`
 `;
 
 const Dog = ({ img, id, breeds }) => {
+	const VoteHandler = async (vote) => {
+		const response = await voteDogsApi({ imageId: id, vote: vote });
+		alert(response.message);
+	};
 	return (
 		<Wrapper key={id}>
 			<Img src={img} alt={id} />
 			<ButtonWrapper>
 				<VoteButton
 					onClick={() => {
-						voteDogsApi({ imageId: id, vote: 1 });
+						VoteHandler(1);
 					}}
 					rgb='0,200,0'>
 					Yay
@@ -54,7 +58,7 @@ const Dog = ({ img, id, breeds }) => {
 				<VoteButton
 					rgb='200,0,0'
 					onClick={() => {
-						voteDogsApi({ imageId: id, vote: 0 });
+						VoteHandler(0);
 					}}>
 					Nay
 				</VoteButton>
