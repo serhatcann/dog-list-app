@@ -28,7 +28,6 @@ export const voteDogsApi = async ({ apiURL = voteURL, imageId, vote }) => {
 				value: vote,
 			}),
 		});
-		console.log(response);
 		return response.json();
 	} catch (error) {
 		return error;
