@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Prerequisites
  
  * [Yarn - Package Manager](https://yarnpkg.com/) need to be installed on your machine.
- * You need to get API key from (https://docs.thedogapi.com/) with your email address in order to fetch and vote dogs.
+ * You need to get API key from [Dogs API](https://docs.thedogapi.com/) with your email address in order to fetch and vote dogs.
 
 ## Steps
 1. Clone the project and run `yarn` to install all required dependencies.
