@@ -1,7 +1,7 @@
 import DogInfo from './DogInfo';
 import styled from 'styled-components';
 import Button from '../../UI/Button';
-
+import { voteDogsApi } from '../../app/utils';
 const Wrapper = styled.div`
 	margin: 10px;
 	padding: 10px;
@@ -44,8 +44,20 @@ const Dog = ({ img, id, breeds }) => {
 		<Wrapper key={id}>
 			<Img src={img} alt={id} />
 			<ButtonWrapper>
-				<VoteButton rgb='0,200,0'>Yay</VoteButton>
-				<VoteButton rgb='200,0,0'>Nay</VoteButton>
+				<VoteButton
+					onClick={() => {
+						voteDogsApi({ imageId: id, vote: 1 });
+					}}
+					rgb='0,200,0'>
+					Yay
+				</VoteButton>
+				<VoteButton
+					rgb='200,0,0'
+					onClick={() => {
+						voteDogsApi({ imageId: id, vote: 0 });
+					}}>
+					Nay
+				</VoteButton>
 			</ButtonWrapper>
 			{breeds &&
 				breeds.map((breed) => {

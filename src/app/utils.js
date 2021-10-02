@@ -23,11 +23,12 @@ export const voteDogsApi = async ({ apiURL = voteURL, imageId, vote }) => {
 				'X-Api-Key': process.env.REACT_APP_DOG_API_KEY,
 				'Content-Type': 'application/json',
 			},
-			body: {
+			body: JSON.stringify({
 				image_id: imageId,
 				value: vote,
-			},
+			}),
 		});
+		console.log(response);
 		return response.json();
 	} catch (error) {
 		return error;
