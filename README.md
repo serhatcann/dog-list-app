@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Steps
 1. Clone the project and run `yarn` to install all required dependencies.
 2. After installation done, you can start the project with `yarn start`.
-3. Below commends are generated automatically by `create-react-app` bootstrap and can be used for this project.
+3. Below commands are generated automatically by `create-react-app` bootstrap and can be used for this project.
 
 ## Available Scripts
 
