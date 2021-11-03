@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
-import DogList from './components/DogList';
+import DogList from './components/Dog/DogList';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`

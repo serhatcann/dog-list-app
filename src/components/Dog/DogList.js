@@ -1,4 +1,4 @@
-import Dog from './Dog/Dog';
+import Dog from './Dog';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
